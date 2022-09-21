@@ -27,8 +27,6 @@ router.get('/cells', async (req, res) => {
     try {
         // Read the file
         const result = await fs.readFile(fullPath, { encoding: 'utf-8' });
-        console.log(fullPath, "FULLPATH")
-        console.log(result, "RESULT")
         res.send(JSON.parse(result));
         
     } catch (err) {
